@@ -15,7 +15,7 @@ how many points out of 20 do you deserve on this assignment:
 <!-- Write your self-reflection under this line -->
 Ran into a couple problems and just needed to read the instructions slower and get some help from a classmate. 
 ### How long it took me to finish this?
-2 Hours
+2 Hours + 30 mins for Storage section
 
 ## Discussion Questions:
 1. What does the bootstrap `display-4` class do?
