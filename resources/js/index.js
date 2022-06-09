@@ -81,6 +81,7 @@ sendButton.addEventListener("click", function(sendButtonClickEvent) {
   myMessage.value = "";
 });
 
+// Save button for Name
 saveButton.addEventListener("click", function(saveButtonClickEvent) {
   localStorage.setItem("username", nameInput.value);
 });
