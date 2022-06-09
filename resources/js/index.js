@@ -2,6 +2,7 @@ const nameInput = document.getElementById("my-name-input");
 const myMessage = document.getElementById("my-message");
 const sendButton = document.getElementById("send-button");
 const chatBox = document.getElementById("chat");
+const saveButton = document.getElementById("save-button");
 
 //Grabbing Messages
 async function updateMessages() {
@@ -51,8 +52,8 @@ function formatMessage(message, myNameInput) {
   }
 }
 
-const MILLISECONDS_IN_TEN_SECONDS = 10000;
-setInterval(updateMessages, MILLISECONDS_IN_TEN_SECONDS);
+const MILLISECONDS_IN_FIVE_SECONDS = 5000;
+setInterval(updateMessages, MILLISECONDS_IN_FIVE_SECONDS);
 
 //Sending Messages
 function sendMessages(username, text) {
@@ -79,3 +80,19 @@ sendButton.addEventListener("click", function(sendButtonClickEvent) {
   sendMessages(sender,message);
   myMessage.value = "";
 });
+
+saveButton.addEventListener("click", function(saveButtonClickEvent) {
+  localStorage.setItem("username", nameInput.value);
+});
+
+function savedUsernameCheck(){
+  if(localStorage.getItem("username") == "" ){
+    myMessage.disabled = true;
+  }
+  else {
+    myMessage.disabled = false;
+  }
+}
+
+const MILLISECONDS_IN_FOUR_SECONDS = 4000;
+setInterval(savedUsernameCheck, MILLISECONDS_IN_FOUR_SECONDS);
